@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style_contactanos.css">
+</head>
+<body>
+    
+      
+    <header>
+        <div class="content">
+            <div class="menu container">     
+                <a href="/index.html" class="logo"><img src="img/logo.png" alt="" width="40px" height=" 40px"> natura</a>
+                <input type="checkbox" id="menu" />
+                <label for="menu">
+                    <img src="img/menu.png" class="menu-icono" alt="">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="/index.html">Inicio</a></li>
+                        <li><a href="/nosotros.html">Nosotros</a></li>
+                        <li><a href="/Productos.html">Productos</a></li>
+                        <li><a href="/contactanos.html">Contactanos</a></li>
+                        <li><a href="/locales.html">Locales</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>¡Estamos aquí para ayudarte! Puedes ponerte en contacto con nosotros de las siguientes maneras:</p>
+        
+        <div class="medios">
+            <div class="medio">
+                <h3>Correo Electrónico</h3>
+                <p>natura_vive@gmail.com</p>
+            </div>
+            <div class="medio">
+                <h3>Teléfono</h3>
+                <p>+51 951343240</p>
+            </div>
+            <div class="medio">
+                <h3>Redes Sociales</h3>
+                <p><a href="https://www.facebook.com/natura.peru/?locale=es_LA">Facebook: @natura</a></p>
+                <p><a href="https://www.instagram.com/natura.peru/?hl=es">Instagram: @natura</a></p>
+            </div>
+        </div>
+
+        <div class="formulario">
+            <h3>Envíanos un mensaje</h3>
+            <form id="contactForm" action="#" method="post" onsubmit="return validarFormulario()">
+                <label for="nombre">Tu Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Tu Correo:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Tu Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <!-- Checkbox para confirmar mayor de edad -->
+                <div class="checkbox-container">
+                    <label>
+                        <input type="checkbox" id="mayorEdad" name="mayorEdad">
+                        Confirmo que soy mayor de edad.
+                    </label>
+                </div>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+
+    </section>
+
+    <script>
+        function validarFormulario() {
+            const checkbox = document.getElementById('mayorEdad');
+            if (!checkbox.checked) {
+                alert('PORFAVOR CONFIRMA TU EDAD');
+                return false;  // Evita que el formulario se envíe
+            }
+            return true;  // Permite que el formulario se envíe
+        }
+    </script>
+
+    <footer class="coopyrigth">
+        <center>
+            <p>&copy; 2025 Natura Todos los derechos reservados.</p>
+        </center>
+    </footer>
+
+</body>
+</html>
